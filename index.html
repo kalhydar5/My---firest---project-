@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00f2fe;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 24px; margin-bottom: 5px; }
+        p { color: #ccc; font-size: 14px; margin-bottom: 20px; }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #00f2fe;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #4facfe;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Music Player Styling */
+        .music-box {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .music-btn {
+            background: #ff416c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- आपकी फोटो -->
+        <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
+        
+        <h1>आपका नाम</h1>
+        <p>Developer | Creator | Tech Enthusiast</p>
+
+        <!-- GitHub Link -->
+        <a href="https://github.com/your-username" target="_blank" class="btn">🚀 My GitHub Profile</a>
+        <a href="#" class="btn">💼 My Projects</a>
+        <a href="#" class="btn">📲 Contact Me</a>
+
+        <!-- Background Music Section -->
+        <div class="music-box">
+            <p style="font-size: 12px; margin-bottom: 5px;">🎵 Background Song</p>
+            <!-- MP3 Song का URL यहाँ डालें -->
+            <audio id="mySong" src="YOUR_SONG_URL_HERE.mp3" loop></audio>
+            <button class="music-btn" onclick="toggleMusic()">Play / Pause Song</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMusic() {
+            var song = document.getElementById("mySong");
+            if (song.paused) {
+                song.play();
+            } else {
+                song.pause();
+            }
+        }
+    </script>
+
+</body>
+</html>
